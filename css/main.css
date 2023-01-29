@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+:root{
+    --primary-color: #0A2463;
+    --secondary-color: #292929;
+    --third-color: #008FCC;
+    --fourth-color: #FB3640;
+    --light-color: #ffffff;
+    --size-hight:24px;
+    --size-medium:18px;
+    --size-normal:16px;
+    --size-small:14px;
+    --size-mini: 12px;
+    --size-extra-mini: 4px;
+    --font-text: 'Ubuntu', sans-serif;;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-text);
+    font-size: var(--size-small);
+}
+body,main,ul,li,.task, form{
+    display: flex;
+}
+body,main,ul{
+    flex-direction: column;
+}
+li,.task, form{
+    flex-direction: row;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+    padding: var(--size-mini);
+    background: var(--primary-color);
+}
+main{
+    gap: var(--size-small);
+    height: 100%;
+}
+form{
+    gap: var(--size-mini);
+    width: 100%;
+}
+.task, .list{
+    background: var(--light-color);
+    padding: var(--size-small);
+    border-radius: var(--size-extra-mini);
+}
+.task{
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+}
+.task input{
+    width: 75%;
+}
+.task button{
+    width: 25%;
+    background: var(--third-color);
+    border: 0;
+    color: var(--light-color);
+    border-radius: var(--size-extra-mini);
+}
+.list{
+    height: 90%;
+}
+li{
+    border-bottom: 1px solid #E2E2E2;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary-color);;
+}
+li:first-of-type{
+    padding: 0 var(--size-mini) var(--size-mini);
+}
+li+li{
+    padding: var(--size-mini);
+}
+.icon{
+    background: var(--fourth-color);
+    color: var(--light-color);
+    padding: 10px;
+    border: 0;
+    outline: none;
+    border-radius: var(--size-extra-mini);
+}
+input{
+    padding: var(--size-extra-mini) var(--size-small);
+    color: black;
+    outline: none;
+    border: 1px solid #E2E2E2;
+    border-radius: var(--size-extra-mini);
+}
+@media all and (min-width: 600px){
+    body{
+        padding: var(--size-small) 20% var(--size-small);
+    }
+    input, li, button{
+        font-size: var(--size-normal);
+    }
+}
+
+@media all and (min-width: 800px){
+    body{
+        padding: var(--size-small) 30% var(--size-small);
+    }
+}
