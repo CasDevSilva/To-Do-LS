@@ -31,13 +31,13 @@ li,.task, form{
 }
 body{
     height: 100vh;
-    overflow: hidden;
-    padding: var(--size-mini);
+    overflow-x: hidden;
+    padding: 0 var(--size-mini);
     background: var(--primary-color);
 }
 main{
     gap: var(--size-small);
-    height: 100%;
+    padding: var(--size-hight) 0;
 }
 form{
     gap: var(--size-mini);
@@ -63,14 +63,12 @@ form{
     color: var(--light-color);
     border-radius: var(--size-extra-mini);
 }
-.list{
-    height: 90%;
-}
 li{
     border-bottom: 1px solid #E2E2E2;
     justify-content: space-between;
     align-items: center;
-    color: var(--secondary-color);;
+    color: var(--secondary-color);
+    cursor: pointer;
 }
 li:first-of-type{
     padding: 0 var(--size-mini) var(--size-mini);
@@ -95,15 +93,18 @@ input{
 }
 @media all and (min-width: 600px){
     body{
-        padding: var(--size-small) 20% var(--size-small);
+        padding: 0 20%;
     }
     input, li, button{
         font-size: var(--size-normal);
     }
 }
-
 @media all and (min-width: 800px){
     body{
-        padding: var(--size-small) 30% var(--size-small);
+        padding: 0 30%;
     }
+}
+
+.mark{
+    text-decoration:  line-through;
 }
