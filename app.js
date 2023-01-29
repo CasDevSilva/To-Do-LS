@@ -27,6 +27,10 @@ document.addEventListener('click',(e)=>{
         removeElementTask(element.parentElement)
         console.log("Item removed")
     }
+
+    if(element.parentElement.classList.contains("detail")){
+        element.classList.toggle("mark")
+    }
 })
 
 function loadTasks(parent){
